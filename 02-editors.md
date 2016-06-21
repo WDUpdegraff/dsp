@@ -60,7 +60,7 @@ We will also use Jupyter (IPython) notebooks, but this does not remove the need 
 
 What terminal editor will you use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+Emacs; I used it a bit a long time ago.
 
 --
 
@@ -68,6 +68,6 @@ What terminal editor will you use? How did you make your decision?
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+I use Spyder as a Python IDE, and Sublime text for non-python text editing, since I'm a little familiar with both. 
 
- 
+Double clicking a string highlights every entry of that string, highlighting is different for different file types than for plain text files, ⌘ + L	selects line then you scroll down to select more, ⌃ + ⌘ + G	selects all occurances of current, selection.
