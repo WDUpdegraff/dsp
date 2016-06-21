@@ -46,14 +46,14 @@ cross-platform.
 
 Did you install Python 2 or 3? Why?  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+I went with Python 3.5. My experience til now has been in 2.7 but it's not extensive, and I read that 3.x is generally more intuitive for people still learning. And since I just bought a Mac and am installing everything fresh, it seemed a natural time to upgrade.
 
 ###Q2. Which Python Version Installed   
 
 How can you check the version of Python installed if you happen to be on an unfamiliar computer?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
-
+import sys
+print (sys.version_info)
  
 
 
