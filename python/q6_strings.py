@@ -3,6 +3,10 @@
 
 
 def donuts(count):
+    if count<10:
+        return 'Number of donuts: ' + str(count)
+    else:
+        return 'Number of donuts: many'
     """
     Given an int count of a number of donuts, return a string of the
     form 'Number of donuts: <count>', where <count> is the number
@@ -22,6 +26,10 @@ def donuts(count):
 
 
 def both_ends(s):
+    if len(s)<2:
+        return ""
+    else:
+        return s[:2]+s[len(s)-2:]
     """
     Given a string s, return a string made of the first 2 and the last
     2 chars of the original string, so 'spring' yields 'spng'.
@@ -41,6 +49,10 @@ def both_ends(s):
 
 
 def fix_start(s):
+    a = s[0]
+    b = s[1:]
+    b1 = b.replace(a,'*')
+    return a+b1
     """
     Given a string s, return a string where all occurences of its
     first char have been changed to '*', except do not change the
@@ -60,6 +72,7 @@ def fix_start(s):
 
 
 def mix_up(a, b):
+    return b[0]+a[1:]+' '+a[0]+b[1:]
     """
     Given strings a and b, return a single string with a and b
     separated by a space '<a> <b>', except swap the first 2 chars of
@@ -78,6 +91,10 @@ def mix_up(a, b):
 
 
 def verbing(s):
+    if len(s)>2:
+        return s+'ing'
+    else:
+        return s
     """
     Given a string, if its length is at least 3, add 'ing' to its end.
     Unless it already ends in 'ing', in which case add 'ly' instead.
@@ -95,6 +112,15 @@ def verbing(s):
 
 
 def not_bad(s):
+    if 'not' and 'bad' in s:
+        n = s.index('not')
+        b = s.index('bad')
+        if n>b:
+            return s
+        else:
+            return s[:n]+'good'+s[b+3:]
+    else:
+        return s
     """
     Given a string, find the first appearance of the substring 'not'
     and 'bad'. If the 'bad' follows the 'not', replace the whole
@@ -115,6 +141,12 @@ def not_bad(s):
 
 
 def front_back(a, b):
+    af = a[:len(a)-int(len(a)/2)]
+    ab = a[len(a)-int(len(a)/2):]
+    bf = b[:len(b)-int(len(b)/2)]
+    bb = b[len(b)-int(len(b)/2):]
+    return af+bf+ab+bb
+    
     """
     Consider dividing a string into two halves. If the length is even,
     the front and back halves are the same length. If the length is
