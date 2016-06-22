@@ -1,5 +1,7 @@
 # Hint:  use Google to find python function
 
+#I wrote a single function that can handle all the inputs, and many others:
+
 #days_between can handle any of the three input formats, and more (as seen in the test section)
 
 #Dates must be strings
