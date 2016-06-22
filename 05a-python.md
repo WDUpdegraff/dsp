@@ -46,12 +46,13 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
 Use Python to compute days between start and stop date.   
 a.  
 
+There were 937 days between January 2, 2013 CE and July 28, 2015 CE.
 ```
 date_start = '01-02-2013'    
 date_stop = '07-28-2015'
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+There were 937 days between January 2, 2013 CE and July 28, 2015 CE.
 
 b.  
 ```
@@ -59,7 +60,7 @@ date_start = '12312013'
 date_stop = '05282015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+There were 513 days between December 31, 2013 CE and May 28, 2015 CE.
 
 c.  
 ```
@@ -67,7 +68,7 @@ date_start = '15-Jan-1994'
 date_stop = '14-Jul-2015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE  (answer will be in number of days)
+There were 7850 days between January 15, 1994 CE and July 14, 2015 CE.
 
 Place code in this file: [q5_datetime.py](python/q5_datetime.py)
 
