@@ -81,7 +81,5 @@ domainnums = countlist(domains)#the next two lines print the answer to Q4
 
 #The following creates the csv for part 5
 with open('emails.csv', 'w', newline='') as csvfile:
-    writeything = csv.writer(csvfile, delimiter=' ',
-                            quotechar='|', quoting=csv.QUOTE_MINIMAL)
-    for line in emails:
-        writeything.writerow(line)
+    writeything = csv.writer(csvfile, delimiter = '\n', dialect ='excel')
+    writeything.writerow(emails)
