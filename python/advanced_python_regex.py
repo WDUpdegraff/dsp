@@ -1,3 +1,5 @@
+#Didn't use regex because more familiar with this approach
+
 import csv
 import urllib.request
 import string
@@ -20,17 +22,22 @@ def countlist(rawlist):#relevant later
 names = [None]*(len(biostat)-1)#because skipping first list
 titles = [None]*(len(biostat)-1)
 emails = [None]*(len(biostat)-1)
+degreeslist = [None]*(len(biostat)-1)#valuable later
 degreestring = ''#using a string to split since there are multiple degrees in each
 
 i=1#to skip first list
 while i<len(biostat):
     names[i-1]=biostat[i][0]
+    degreeslist[i-1]=biostat[i][0]
     deg = biostat[i][1]
     exclude = set(string.punctuation)
     deg = ''.join(ch for ch in deg if ch not in exclude)
     #killing punctuation so PhD and Ph.D look the same
     degreestring = degreestring+deg+' '
-    titles[i-1]=biostat[i][2]
+    title=biostat[i][2]
+    title = title.replace(' of Biostatistics','')
+    title = title.replace(' is Biostatistics','')
+    titles[i-1]=title
     emails[i-1]=biostat[i][3]
     i=i+1
 
@@ -64,7 +71,7 @@ titlenums = countlist(titles)#the next two lines print the answer to Q2
 #print(titlenums)
 
 #the next line prints the answer to Q3
-print(emails)
+#print(emails)
 
 domainnums = countlist(domains)#the next two lines print the answer to Q4
 #print('There are '+str(len(domainnums))+' different domains:')
