@@ -1,3 +1,5 @@
+#Didn't use regex because more familiar with this approach
+
 import csv
 import urllib.request
 import string
