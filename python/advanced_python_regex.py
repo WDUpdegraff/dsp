@@ -1,5 +1,3 @@
-#Didn't use regex because more familiar with this approach
-
 import csv
 import urllib.request
 import string
@@ -65,9 +63,8 @@ titlenums = countlist(titles)#the next two lines print the answer to Q2
 #print('There are '+str(len(titlenums))+' different titles:')
 #print(titlenums)
 
-#the next two lines print the answer to Q3
-#emailsprint = sorted(emails)
-#print(emailsprint)
+#the next line prints the answer to Q3
+print(emails)
 
 domainnums = countlist(domains)#the next two lines print the answer to Q4
 #print('There are '+str(len(domainnums))+' different domains:')
