@@ -15,7 +15,7 @@ How are Python lists and tuples similar and different? Which will work as keys i
 Tuples are immutable, lists can be assigned values. Tuples are superior as dictionary keys because dictionaries have to be hashable -- i.e. the hash function of a value has to always return the same value. Since lists are mutable, they can be modified and return a different value.
 
 Dictionary values, on the other hand, can be lists. Indeed, it's actually useful to store them that way for later editing. 
-
+ 
 To use a real world analogy, natural language dictionaries frequently edit the definitions (values) of words, and they frequently add words (adding more key/value pairs), but they very very rarely change the spelling of existing words while keeping the definition constant (changing keys).
 
 ---
