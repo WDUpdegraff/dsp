@@ -1,8 +1,7 @@
-#Didn't use regex because more familiar with this approach
-
 import csv
 import urllib.request
 import string
+from pprint import pprint
 url = 'https://raw.githubusercontent.com/WDUpdegraff/dsp/master/python/faculty.csv'
 request = urllib.request.Request(url)
 response = urllib.request.urlopen(request)
@@ -28,7 +27,7 @@ degreestring = ''#using a string to split since there are multiple degrees in ea
 i=1#to skip first list
 while i<len(biostat):
     names[i-1]=biostat[i][0]
-    degreeslist[i-1]=biostat[i][0]
+    degreeslist[i-1]=biostat[i][1]
     deg = biostat[i][1]
     exclude = set(string.punctuation)
     deg = ''.join(ch for ch in deg if ch not in exclude)
@@ -64,20 +63,23 @@ while i<len(emails):
     
 degreenums.sort(key=lambda x: x[1],reverse = True)#the next two lines print the answer to Q1
 #print('There are '+str(len(degreeuniques))+' types of degrees:')
-#print(degreenums)  
+#print(degreenums)
+#THIS PRINTS THE ANSWER TO Q1
   
-titlenums = countlist(titles)#the next two lines print the answer to Q2
+titlenums = countlist(titles)
 #print('There are '+str(len(titlenums))+' different titles:')
 #print(titlenums)
+#THIS PRINTS THE ANSWER TO Q2
 
-#the next line prints the answer to Q3
 #print(emails)
+#THIS PRINTS THE ANSWER TO Q3
 
-domainnums = countlist(domains)#the next two lines print the answer to Q4
-#print('There are '+str(len(domainnums))+' different domains:')
-#print(domainnums)
+domainnums = countlist(domains)
+print('There are '+str(len(domainnums))+' different domains:')
+print(domainnums)
+#THIS PRINTS THE ANSWER TO Q4
 
-#The following creates the csv for part 5
+#THE FOLLOWING CREATES THE CSV FOR Q5
 with open('emails.csv', 'w', newline='') as csvfile:
     writeything = csv.writer(csvfile, delimiter = '\n', dialect ='excel')
     writeything.writerow(emails)
