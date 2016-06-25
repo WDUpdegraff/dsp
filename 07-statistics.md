@@ -78,8 +78,10 @@ P(Identical Twin|Twin) = P(Twin|Identical Twin)*P(Identical Twin)/P(Twin)
 >>Given information in the problem statement:
 
 >>P(Twin|Identical Twin) = 1, because all identical twins are twins
-P(Identical Twin) = 1/300
-P(Twin) = P(Identical Twin) + P(Fraternal Twin) = 1/300 + 1/125, because all twins are either identical or fraternal (and none are both)
+
+>>P(Identical Twin) = 1/300 as given in the problem statement
+
+>>P(Twin) = P(Identical Twin) + P(Fraternal Twin) = 1/300 + 1/125, because all twins are either identical or fraternal (and none are both)
 
 >>Therefore P(Identical Twin|Twin) = [1*(1/300)] / [(1/300)+(1/125)] = 0.2941 or about 29%.
 
