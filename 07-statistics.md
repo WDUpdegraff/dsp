@@ -90,7 +90,9 @@ P(Identical Twin|Twin) = P(Twin|Identical Twin)*P(Identical Twin)/P(Twin)
 ###Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>>The Bayesian approach uses probabilities informed by multiple sources of information (sampling data and various types of prior information), while Frequentists rely more on sampling rates. Bayesians will express assessments in terms of probabilities more or less the way non-statisticians will, while Frequentists will relate probabilities to a (real or hypothetical) sample set.
+
+>>![Image](https://imgs.xkcd.com/comics/frequentists_vs_bayesians.png)
 
 ---
 
