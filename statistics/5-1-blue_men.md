@@ -7,19 +7,25 @@ I computed all three:
 If Blue Man Group applicants are measured with high precision (i.e. elligible height range is from 70.0-73.0 inches):
 
 34.3% of men are elligible for the Blue Man Group
+
 16.8% of men are too tall for the Blue Man Group
+
 49.0% of men are too short for the Blue Man Group
 
 If Blue Man Group applicants are measured to the nearest inch, and that the range is inclusive (i.e. elligible height range is from 69.5-73.5 inches):
 
 44.6% of men are elligible for the Blue Man Group
+
 13.0% of men are too tall for the Blue Man Group
+
 42.4% of men are too short for the Blue Man Group
 
 If Blue Man Group applicants are measured to the nearest inch, and that the range is *not* inclusive (i.e. elligible height range is from 70.5-72.5 inches):
 
 23.3% of men are elligible for the Blue Man Group
+
 21.2% of men are too tall for the Blue Man Group
+
 55.5% of men are too short for the Blue Man Group
 
 **Python code follows:**
