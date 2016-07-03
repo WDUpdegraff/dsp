@@ -2,7 +2,7 @@
 
 The actual mean number of children is 1.024. The biased mean is 2.404. 
 
-![Image of plot](https://raw.githubusercontent.com/WDUpdegraff/dsp/master/actualbiased.png)
+![Image of plot](https://raw.githubusercontent.com/WDUpdegraff/dsp/master/actualvsbiased.png)
 
 ```
 import pandas as pd
@@ -23,21 +23,27 @@ i=0
 while i<(maxk-mink+1):
     n = mink+i
     k[i]=n#family size
-    countA = (nums==(mink+i)).sum()#count of families with n kids
-    A[i]= countA
-    B[i]=countA*n#count of kids in families with n kids
+    A[i]= (nums==(mink+i)).sum()#count of families with n kids
+    B[i]=(nums==(mink+i)).sum()*n#count of kids in families with n kids
     i=i+1
 
+Anorm = A/np.sum(A)
+Bnorm = B/np.sum(B)
 width = 0.4
-plt.bar(k,A,width,color = 'b')
+plt.bar(k,Anorm,width,color = 'b')
 plt.hold(True)
-plt.bar(k+width,B,width,color = 'r')
+plt.bar(k+width,Bnorm,width,color = 'r')
+plt.title('Actual vs. Biased Family Size')
+plt.xlabel('Family Size (number of children)')
+plt.ylabel('Share of Respondents')
 
 red_patch = mpatches.Patch(color='b', label='Actual')
-
 blue_patch = mpatches.Patch(color='r', label='Biased')
 plt.legend(handles=[red_patch, blue_patch])
 
-Amean = float(np.dot(k.transpose(),A)/np.sum(A))#Actual mean
-Bmean = float(np.dot(k.transpose(),B)/np.sum(B))#Biased mean
+Amean = float(np.dot(k.transpose(),A)/np.sum(A))
+Bmean = float(np.dot(k.transpose(),B)/np.sum(B))
+
+message = "\nThe actual mean number of children is "+str(round(Amean,3))+'. The biased mean is '+str(round(Bmean,3))+'.'
+print(message)
 ```
