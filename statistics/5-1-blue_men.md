@@ -28,7 +28,7 @@ If Blue Man Group applicants are measured to the nearest inch, and that the rang
 
 55.5% of men are too short for the Blue Man Group
 
-**Python code follows:**
+```
 
 import scipy.stats as stats
 
@@ -51,3 +51,5 @@ mess3b = writemess(tocm(5,10.5),tocm(6,0.5),178,7.7,1)
 mess3 = '\n\nIf Blue Man Group applicants are rounded to the nearest inch, and that the range is *not* inclusive (i.e. elligible height range is from 70.5-72.5 inches):\n\n'+mess3b
 
 print(mess1+mess2+mess3)
+
+```
