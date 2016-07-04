@@ -21,15 +21,15 @@ import thinkplot
 N = 1000#total rands
 bins = 30
 A_list = [None]*N
-i=0
+i = 0
 while i<N:
     A_list[i] = random.random()
-    i=i+1
+    i = i + 1
 
 A = np.array(A_list)
 weights = np.ones_like(A_list)/len(A_list)
 fig1 = plt.figure()
-plt.hist(A,bins=bins,weights=weights)
+plt.hist(A,bins = bins,weights = weights)
 plt.title('Probability Mass Function Histogram')
 plt.xlabel('Value of random.random')
 plt.ylabel('Fraction of counts in bin')
@@ -44,15 +44,15 @@ plt.ylabel('Probability Mass (0.001 = 1 count)')
 
 B = np.zeros([N,1])
 C = np.zeros([N,1])
-i=0
-while i<N:
-    m = (i+1)/N
+i = 0
+while i < N:
+    m = (i + 1)/N
     l = i/N
-    B[i]=len(A[np.where(A < m)])/N
-    C[i]=len(A[np.where((A-l) < m)])/N
-    i=i+1
+    B[i] = len(A[np.where(A < m)])/N
+    C[i] = len(A[np.where((A - l) < m)])/N
+    i = i + 1
 ind = np.arange(N)/N
-fig3=plt.figure()
+fig3 = plt.figure()
 plt.bar(ind,B)
 plt.title('Cumulative Probability')
 plt.xlabel('Value of random.random')
